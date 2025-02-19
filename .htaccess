@@ -5,3 +5,6 @@ RewriteRule ^uninstall$ index.php?script=uninstall [QSA,L]
 RewriteRule ^configuration$ index.php?script=configuration [QSA,L]
 RewriteRule ^boondmanager.js$ boondmanager.js [QSA,L]
 RewriteRule ^(.*)$ index.php?function=$1 [QSA,L]
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
